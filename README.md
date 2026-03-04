@@ -1,4 +1,4 @@
-# Hospital_Management_System_Cpp
+# Hospital Management System (Console-Based)
 
 A modular **Hospital Management System** project in C++ designed for collaborative development, allowing multiple developers to contribute efficiently.
 
@@ -118,4 +118,62 @@ To keep the project organized:
    * Always create Pull Requests
    * Review code for readability, modularity, and correctness
 
+
+### 1. Abdo - File Operations & Core Logic
+
+**Focus:** Handling persistent data storage without data loss. Reading, writing, searching, modifying, and deleting records from text files.
+
+* **Classes:** `FileHandler` / `DatabaseManager`
+* **Responsibilities:**
+* `saveRecord(Patient p)`
+* `searchRecord(String idOrName)`
+* `updateRecord(String idOrName, Patient updatedInfo)`
+* `deleteRecord(String id)`
+* `fetchAllRecords()`
+
+
+
+### 2. Ahmad - Sorting, Filtering & Financials
+
+**Focus:** Managing the logic for displaying lists of patients based on specific criteria and calculating hospital expenditures.
+
+* **Classes:** `RecordManager`, `FinancialRecord`
+* **Responsibilities:**
+* List patients alphabetically.
+* List patients by category (Emergency vs. O.P.D.).
+* List patients by a specific admission date.
+* Calculate `totalCharge`, `totalDeposited`, and `totalMoneyToReturn`.
+
+
+
+### 3. Mostfa - Data Models, UI & Menus
+
+**Focus:** Building the blueprint for the data and creating the console user interface, formatting the outputs exactly as required.
+
+* **Classes:** `Patient`, `UserInterface`
+* **Responsibilities:**
+* Define the `Patient` properties (Name, ID, Age, Sex, Disease, Room, etc.).
+* Build `showWelcomeScreen()` and `showMainMenu()`.
+* Handle user inputs and display success/error messages (e.g., "No records available").
+
+
+
 ---
+
+## System Architecture
+
+* **`Patient`**: Base data model holding personal and medical details.
+* **`FinancialRecord`**: Data model attached to a patient holding billing details.
+* **`UserInterface`**: Handles all `cin` and `cout` operations and menu navigation.
+* **`RecordManager`**: Handles sorting and filtering arrays/lists of `Patient` objects.
+* **`FileHandler`**: Handles all file stream operations (`ifstream`, `ofstream`).
+
+---
+
+## Project Requirements Checklist
+
+* [ ] Use Object-Oriented Programming (OOP) concepts.
+* [ ] Implement appropriate Data Structures.
+* [ ] Draw and submit a UML Class Diagram before coding.
+* [ ] Create a GitHub repository and push all code.
+
