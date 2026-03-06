@@ -127,7 +127,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Appointment.cpp" />
+    <ClCompile Include="AppointmentRepository.cpp" />
+    <ClCompile Include="Doctor.cpp" />
+    <ClCompile Include="DoctorRepository.cpp" />
+    <ClCompile Include="HospitalService.cpp" />
     <ClCompile Include="Hospital_Management_System_Cpp.cpp" />
+    <ClCompile Include="Patient.cpp" />
+    <ClCompile Include="FileManager.cpp" />
+    <ClCompile Include="PatientRepository.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\.gitignore" />
@@ -135,6 +143,20 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\CMakeLists.txt" />
+    <Text Include="appointments.txt" />
+    <Text Include="doctors.txt" />
+    <Text Include="patients.txt" />
+    <Text Include="ToDo.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Appointment.h" />
+    <ClInclude Include="AppointmentRepository.h" />
+    <ClInclude Include="Doctor.h" />
+    <ClInclude Include="DoctorRepository.h" />
+    <ClInclude Include="FileManager.h" />
+    <ClInclude Include="HospitalService.h" />
+    <ClInclude Include="Patient.h" />
+    <ClInclude Include="PatientRepository.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

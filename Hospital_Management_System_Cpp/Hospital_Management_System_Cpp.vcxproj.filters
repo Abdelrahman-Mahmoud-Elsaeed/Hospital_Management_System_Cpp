@@ -1,22 +1,49 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="src">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="storage">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="include">
+    <Filter Include="models">
+      <UniqueIdentifier>{fbf4634f-49e5-49d1-99be-4ffe11f5f7c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="repositories">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
     <Filter Include="data">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+      <UniqueIdentifier>{f45c7a07-6d22-4752-96a6-903a20683f45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="services">
+      <UniqueIdentifier>{ba6f41ef-1e38-486a-8f5f-36dc9ad9f632}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Hospital_Management_System_Cpp.cpp">
-      <Filter>src</Filter>
+    <ClCompile Include="Patient.cpp">
+      <Filter>models</Filter>
+    </ClCompile>
+    <ClCompile Include="Doctor.cpp">
+      <Filter>models</Filter>
+    </ClCompile>
+    <ClCompile Include="Appointment.cpp">
+      <Filter>models</Filter>
+    </ClCompile>
+    <ClCompile Include="HospitalService.cpp">
+      <Filter>services</Filter>
+    </ClCompile>
+    <ClCompile Include="FileManager.cpp">
+      <Filter>storage</Filter>
+    </ClCompile>
+    <ClCompile Include="Hospital_Management_System_Cpp.cpp" />
+    <ClCompile Include="AppointmentRepository.cpp">
+      <Filter>repositories</Filter>
+    </ClCompile>
+    <ClCompile Include="DoctorRepository.cpp">
+      <Filter>repositories</Filter>
+    </ClCompile>
+    <ClCompile Include="PatientRepository.cpp">
+      <Filter>repositories</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -25,5 +52,41 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\CMakeLists.txt" />
+    <Text Include="patients.txt">
+      <Filter>data</Filter>
+    </Text>
+    <Text Include="doctors.txt">
+      <Filter>data</Filter>
+    </Text>
+    <Text Include="appointments.txt">
+      <Filter>data</Filter>
+    </Text>
+    <Text Include="ToDo.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="FileManager.h">
+      <Filter>storage</Filter>
+    </ClInclude>
+    <ClInclude Include="HospitalService.h">
+      <Filter>services</Filter>
+    </ClInclude>
+    <ClInclude Include="AppointmentRepository.h">
+      <Filter>repositories</Filter>
+    </ClInclude>
+    <ClInclude Include="DoctorRepository.h">
+      <Filter>repositories</Filter>
+    </ClInclude>
+    <ClInclude Include="PatientRepository.h">
+      <Filter>repositories</Filter>
+    </ClInclude>
+    <ClInclude Include="Appointment.h">
+      <Filter>models</Filter>
+    </ClInclude>
+    <ClInclude Include="Doctor.h">
+      <Filter>models</Filter>
+    </ClInclude>
+    <ClInclude Include="Patient.h">
+      <Filter>models</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
