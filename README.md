@@ -9,20 +9,41 @@ A modular **Hospital Management System** project in C++ designed for collaborati
 ```
 Hospital_Management_System_Cpp/
 ├─ include/        # Header files (.h/.hpp)
+│   ├─ models/         # Patient, Doctor, Appointment classes
+│   ├─ repositories/   # PatientRepository, DoctorRepository, AppointmentRepository
+│   ├─ services/       # HospitalService class
+│   └─ storage/        # FileManager class
 ├─ src/            # Source files (.cpp)
-├─ data/           # Data files (e.g., databases, CSVs)
-├─ build/          # Compiled objects (ignored in Git)
+│   ├─ models/         # Implementations of entity classes
+│   ├─ repositories/   # Implementations of repositories
+│   ├─ services/       # Implementation of HospitalService
+│   └─ storage/        # FileManager implementation
+├─ data/           # Persistent data files (patients.txt, doctors.txt, appointments.txt)
 ├─ CMakeLists.txt  # Build configuration
 └─ README.md       # Project documentation
 ```
 
-**Notes:**
+**Folder Details:**
 
-* `include/` → contains all header files
-* `src/` → contains all implementation files
-* `data/` → contains project data files such as CSV or JSON
-* `build/` → contains compiled files (ignored in Git)
-* `tests/` → contains unit tests (Google Test recommended)
+include/ → Contains all header files and class declarations
+
+models/ → Defines Patient, Doctor, Appointment entities
+
+repositories/ → Manages in-memory data and file interaction for each entity
+
+services/ → Contains HospitalService for business logic
+
+src/ → Contains all source files (.cpp)
+
+Implements methods declared in headers
+
+storage/ → Contains FileManager for file operations (read/write/append)
+
+data/ → Stores persistent patient, doctor, and appointment records (.txt files)
+
+CMakeLists.txt → Build system configuration
+
+README.md → Project documentation
 
 ---
 
