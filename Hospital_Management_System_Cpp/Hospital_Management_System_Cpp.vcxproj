@@ -136,6 +136,7 @@
     <ClCompile Include="Patient.cpp" />
     <ClCompile Include="FileManager.cpp" />
     <ClCompile Include="PatientRepository.cpp" />
+    <ClCompile Include="Person.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\.gitignore" />
@@ -157,6 +158,7 @@
     <ClInclude Include="HospitalService.h" />
     <ClInclude Include="Patient.h" />
     <ClInclude Include="PatientRepository.h" />
+    <ClInclude Include="Person.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

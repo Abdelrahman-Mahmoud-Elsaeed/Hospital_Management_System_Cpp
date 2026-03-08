@@ -65,6 +65,9 @@
     <ClCompile Include="Hospital_Management_System_Cpp.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="Person.cpp">
+      <Filter>src\models</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\.gitignore" />
@@ -106,6 +109,9 @@
       <Filter>include\models</Filter>
     </ClInclude>
     <ClInclude Include="Patient.h">
+      <Filter>include\models</Filter>
+    </ClInclude>
+    <ClInclude Include="Person.h">
       <Filter>include\models</Filter>
     </ClInclude>
   </ItemGroup>
