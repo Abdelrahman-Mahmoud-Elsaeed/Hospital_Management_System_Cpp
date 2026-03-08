@@ -14,7 +14,7 @@ public:
 
 	void Set_specialization(string Spe);
 	string get_specialization();
-	void Set_exper(string exper);
+	void Set_exper(int exper);
 	int get_exper();
 	void Desplay();
 };

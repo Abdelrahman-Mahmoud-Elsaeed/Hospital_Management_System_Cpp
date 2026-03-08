@@ -27,6 +27,4 @@ void Doctor::Desplay() {
 	Doctor::Desplay();
 
 	cout << "My specialization " << m_specialization << endl << "my experience " << m_experience << endl;
-
-
 }
