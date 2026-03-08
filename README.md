@@ -1,7 +1,3 @@
-Sure! Here’s a **clean, professional README** with the updated tasks and **Ahmad’s tasks replacing Mostfa’s**.
-
----
-
 # Hospital Management System (Console-Based)
 
 A modular **Hospital Management System** project in C++ designed for collaborative development, allowing multiple developers to contribute efficiently.
@@ -135,7 +131,7 @@ git commit -m "Add feature X"
 
 ## **Task List**
 
-### **1️⃣ Abdo – Storage & Repository Layer**
+### Abdo – Storage & Repository Layer**
 
 **Focus:** Handle all file operations and data persistence.
 
@@ -161,7 +157,7 @@ git commit -m "Add feature X"
 
 ---
 
-### **2️⃣ Ahmad – Services, Models & Console UI**
+### Ahmad – Services, Models & Console UI**
 
 **Focus:** Define system data, implement logic, and build the console interface.
 
@@ -197,7 +193,7 @@ git commit -m "Add feature X"
 
 ---
 
-### **3️⃣ Ahmad – Services & Business Logic**
+### Mostfa – Services & Business Logic**
 
 **Focus:** Application logic and operations on the system.
 
