@@ -40,7 +40,6 @@ std::optional<Appointment> AppointmentRepository::deserialize(const std::string&
         Time time = { std::stoi(tokens[5]), std::stoi(tokens[6]) };
         std::string reason = tokens[7];
 
-        // Fetch full objects using the repositories
         std::optional<Patient> p = patientRepo.getPatientById(patientId);
         std::optional<Doctor> d = doctorRepo.getDoctorById(doctorId);
 
