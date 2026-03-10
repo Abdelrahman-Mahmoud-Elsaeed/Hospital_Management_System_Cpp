@@ -1,23 +1,21 @@
-
-using namespace std;
+#include "Patient.h"
 #include <iostream>
-#include "string"
-#include "Patient.h "
 
-Patient::Patient(string name, int id, int age, string gender, int phone, string email, string Inless) : Person(name, id, age, gender, phone, email) {
-	m_Inless = Inless;
-};
+Patient::Patient() : User(), illness("") {}
 
-void Patient::set_m_Inless(string Inless) {
-	m_Inless = Inless;
+Patient::Patient(const std::string& name, int id, int age, const std::string& gender, const std::string& phone, const std::string& email, const std::string& illness)
+    : User(name, id, age, gender, phone, email), illness(illness) {
 }
 
-string Patient::get_m_Inless() {
-	return m_Inless;
+void Patient::setIllness(const std::string& illness) {
+    this->illness = illness;
 }
 
-void Patient::Desplay() {
-	Person::Desplay();
-	cout << "diagnosis  " << m_Inless << endl;
+std::string Patient::getIllness() const {
+    return illness;
+}
 
+void Patient::display() const {
+    User::display();
+    std::cout << "Diagnosis: " << illness << "\n";
 }

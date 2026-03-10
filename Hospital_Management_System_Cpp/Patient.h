@@ -1,21 +1,18 @@
-using namespace std;
-#include <iostream>
-#include "Person.h"
-#include "string "
+#pragma once
 
-class Patient : public Person {
+#include <string>
+#include "User.h"
 
-protected:
-
-	string m_Inless;
+class Patient : public User {
+private:
+    std::string illness;
 
 public:
-	Patient(string name, int id, int age, string gender, int phone, string email, string Inless) : Person(name, id, age, gender, phone, email) {};
+    Patient();
+    Patient(const std::string& name, int id, int age, const std::string& gender, const std::string& phone, const std::string& email, const std::string& illness);
 
-	void set_m_Inless(string Inless);
+    void setIllness(const std::string& illness);
+    std::string getIllness() const;
 
-	string get_m_Inless();
-
-	void Desplay();
-
+    void display() const override;
 };

@@ -1,9 +1,8 @@
-
+#pragma once
 
 #include "Patient.h"
 #include "Doctor.h"
 #include <string>
-using namespace std;
 
 struct Date {
     int year;
@@ -22,28 +21,24 @@ private:
     Doctor doctor;
     Date date;
     Time time;
-    string reason;
+    std::string reason;
 
 public:
     // Constructors
     Appointment();
-    Appointment(Patient p, Doctor d, Date dt, Time tm, string r);
+    Appointment(const Patient& p, const Doctor& d, const Date& dt, const Time& tm, const std::string& r);
 
-    // Getters
-    Patient getPatient() const;
-    Doctor getDoctor() const;
+    const Patient& getPatient() const;
+    const Doctor& getDoctor() const;
     Date getDate() const;
     Time getTime() const;
-    string getReason() const;
+    std::string getReason() const;
 
-    // Setters
-    void setPatient(Patient p);
-    void setDoctor(Doctor d);
-    void setDate(Date dt);
-    void setTime(Time tm);
-    void setReason(string r);
+    void setPatient(const Patient& p);
+    void setDoctor(const Doctor& d);
+    void setDate(const Date& dt);
+    void setTime(const Time& tm);
+    void setReason(const std::string& r);
 
-    // Display
     void display() const;
 };
-

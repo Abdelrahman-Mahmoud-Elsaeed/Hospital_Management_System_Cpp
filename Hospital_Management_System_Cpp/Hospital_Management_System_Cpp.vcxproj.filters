@@ -65,7 +65,7 @@
     <ClCompile Include="Hospital_Management_System_Cpp.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="Person.cpp">
+    <ClCompile Include="User.cpp">
       <Filter>src\models</Filter>
     </ClCompile>
   </ItemGroup>
@@ -111,7 +111,7 @@
     <ClInclude Include="Patient.h">
       <Filter>include\models</Filter>
     </ClInclude>
-    <ClInclude Include="Person.h">
+    <ClInclude Include="User.h">
       <Filter>include\models</Filter>
     </ClInclude>
   </ItemGroup>

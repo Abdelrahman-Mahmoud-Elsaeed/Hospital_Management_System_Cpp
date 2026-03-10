@@ -1,19 +1,20 @@
 #include "Appointment.h"
 #include <iostream>
 #include <iomanip>
-using namespace std;
 
+Appointment::Appointment()
+    : patient(), doctor(), date{ 0, 0, 0 }, time{ 0, 0 }, reason("") {
+}
 
-
-Appointment::Appointment(Patient p, Doctor d, Date dt, Time tm, string r)
+Appointment::Appointment(const Patient& p, const Doctor& d, const Date& dt, const Time& tm, const std::string& r)
     : patient(p), doctor(d), date(dt), time(tm), reason(r) {
 }
 
-Patient Appointment::getPatient() const {
+const Patient& Appointment::getPatient() const {
     return patient;
 }
 
-Doctor Appointment::getDoctor() const {
+const Doctor& Appointment::getDoctor() const {
     return doctor;
 }
 
@@ -25,42 +26,46 @@ Time Appointment::getTime() const {
     return time;
 }
 
-string Appointment::getReason() const {
+std::string Appointment::getReason() const {
     return reason;
 }
 
-void Appointment::setPatient(Patient p) {
+void Appointment::setPatient(const Patient& p) {
     patient = p;
 }
 
-void Appointment::setDoctor(Doctor d) {
+void Appointment::setDoctor(const Doctor& d) {
     doctor = d;
 }
 
-void Appointment::setDate(Date dt) {
+void Appointment::setDate(const Date& dt) {
     date = dt;
 }
 
-void Appointment::setTime(Time tm) {
+void Appointment::setTime(const Time& tm) {
     time = tm;
 }
 
-void Appointment::setReason(string r) {
+void Appointment::setReason(const std::string& r) {
     reason = r;
 }
 
 void Appointment::display() const {
-    cout << "\n========================================" << endl;
-    cout << "       APPOINTMENT DETAILS" << endl;
-    cout << "========================================" << endl;
+    std::cout << "\n========================================\n"
+        << "          APPOINTMENT DETAILS           \n"
+        << "========================================\n";
 
-    cout << "Date: " << setfill('0') << setw(2) << date.day << "/"
-        << setw(2) << date.month << "/" << date.year << endl;
+    std::cout << "--- Patient Info ---\n";
+    patient.display();
 
-    cout << "Time: " << setfill('0') << setw(2) << time.hour << ":"
-        << setw(2) << time.minute << endl;
+    std::cout << "\n--- Doctor Info ---\n";
+    doctor.display();
 
-    cout << "Reason: " << reason << endl;
-
-    cout << "========================================\n" << endl;
+    std::cout << "\n--- Schedule ---" << "\n"
+        << "Date: " << std::setfill('0') << std::setw(2) << date.day << "/"
+        << std::setw(2) << date.month << "/" << date.year << "\n"
+        << "Time: " << std::setfill('0') << std::setw(2) << time.hour << ":"
+        << std::setw(2) << time.minute << "\n"
+        << "Reason: " << reason << "\n"
+        << "========================================\n";
 }

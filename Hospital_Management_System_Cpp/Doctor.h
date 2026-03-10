@@ -1,20 +1,22 @@
-#include "Person.h"
-using namespace std;
-#include <iostream>
+#pragma once
 
-class Doctor : public Person {
-protected:
-	string m_specialization;
-	int m_experience;
+#include <string>
+#include "User.h"
+
+class Doctor : public User {
+private:
+    std::string specialization;
+    int experience;
 
 public:
-	Doctor();
-	Doctor(string name, int id, int age, string gender, int phone, string email, string spe, int exp) : Person(name, id, age, gender, phone, email) {};
+    Doctor();
+    Doctor(const std::string& name, int id, int age, const std::string& gender, const std::string& phone, const std::string& email, const std::string& specialization, int experience);
 
-	void Set_specialization(string Spe);
-	string get_specialization();
-	void Set_exper(int exper);
-	int get_exper();
-	void Desplay();
-	void display();
+    void setSpecialization(const std::string& specialization);
+    std::string getSpecialization() const;
+
+    void setExperience(int experience);
+    int getExperience() const;
+
+    void display() const override;
 };
