@@ -1,23 +1,17 @@
 #pragma once
-#include <iostream>
-#include <fstream>
+
 #include <string>
 #include <vector>
-#include <filesystem>
 
-using namespace std;
-
-class FileManager
-{
+class FileManager {
 public:
-    vector<string> readAllLine(string path);
-    string readLine(string path,int index);
+    std::vector<std::string> readAllLines(const std::string& path) const;
+    std::string readLine(const std::string& path, int index) const;
 
-    void writeAllLines(string path, vector<string> lines);
-    void writeToLine(string path, string line,int index);
+    void writeAllLines(const std::string& path, const std::vector<std::string>& lines) const;
+    void writeToLine(const std::string& path, const std::string& line, int index) const;
+    void appendLine(const std::string& path, const std::string& line) const;
 
-    void appendLine(string path, string line);
-
-    bool fileExists(string path);
-    void clearFile(string path);
+    bool fileExists(const std::string& path) const;
+    void clearFile(const std::string& path) const;
 };

@@ -1,8 +1,12 @@
-
 #include <iostream>
+#include <vector>
+#include <optional>
 
-int main()
-{
-    std::cout << "Hello World!\n";
+#include "Patient.h"
+#include "FileManager.h"
+#include "PatientRepository.h"
+
+int main() {
+
+    return 0;
 }
-

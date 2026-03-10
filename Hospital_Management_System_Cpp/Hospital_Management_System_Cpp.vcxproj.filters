@@ -75,9 +75,6 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\CMakeLists.txt" />
-    <Text Include="patients.txt">
-      <Filter>data</Filter>
-    </Text>
     <Text Include="doctors.txt">
       <Filter>data</Filter>
     </Text>
@@ -85,6 +82,9 @@
       <Filter>data</Filter>
     </Text>
     <Text Include="ToDo.md" />
+    <Text Include="patients.txt">
+      <Filter>data</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AppointmentRepository.h">
